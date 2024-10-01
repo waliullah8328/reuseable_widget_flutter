@@ -7,7 +7,9 @@ import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:reuseable_widget_flutter/re_use_able_widgets/button/custom_elevated_button/custom_elevated_button_controller.dart';
+import 'package:reuseable_widget_flutter/re_use_able_widgets/card_design_and_favorite_screen_management/screens/horizontal_demo_screen.dart';
 import 'package:reuseable_widget_flutter/re_use_able_widgets/custom_check_box/single_check_box/single_check_box_controller.dart';
+import 'package:reuseable_widget_flutter/re_use_able_widgets/table%20format/data_table_demo_screen.dart';
 import 'package:reuseable_widget_flutter/re_use_able_widgets/text_form_field/custom_text_form_field/custom_text_form_field.dart';
 import '../re_use_able_widgets/button/custom_elevated_button/custom_elevated_button.dart';
 import '../re_use_able_widgets/button/custom_text_button.dart';
@@ -62,6 +64,26 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text("Custom Text Button")));
+                },
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTextButton(
+                title: "Favorite Screen",
+                onTap: () {
+                  Get.to(()=>HorizontalCardDemo());
+                },
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTextButton(
+                title: "Table Screen",
+                onTap: () {
+                  Get.to(()=>DataTableDemo());
                 },
               ),
               const Text("2. Custom Elevated Button ......."),
